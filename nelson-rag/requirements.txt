@@ -1,0 +1,20 @@
+# Core — always needed.
+anthropic>=0.70
+numpy>=1.24
+
+# Local embeddings (the default backend). Pulls in torch, so it is the
+# heaviest install here; skip it only if you use NELSON_EMBEDDING_BACKEND=voyage.
+sentence-transformers>=3.0
+
+# Source formats. Install what matches your copy of the textbook.
+pymupdf>=1.24        # .pdf
+EbookLib>=0.18       # .epub
+
+# Web UI (optional; the CLI needs none of this).
+streamlit>=1.36
+
+# Hosted embeddings (optional alternative to sentence-transformers).
+# voyageai>=0.3
+
+# Tests.
+pytest>=8.0

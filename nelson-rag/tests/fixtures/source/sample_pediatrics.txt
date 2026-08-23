@@ -1,0 +1,41 @@
+PART XXVI
+The Nervous System
+
+Chapter 611
+Seizures in Childhood
+
+DEFINITION
+A seizure is a transient occurrence of signs or symptoms resulting from abnormal excessive or synchronous neuronal activity in the brain. Febrile seizures are the most common seizure disorder of childhood, occurring in 2-5% of children between 6 months and 5 years of age.
+
+CLINICAL MANIFESTATIONS
+A simple febrile seizure is generalized, lasts less than 15 minutes, and does not recur within 24 hours. A complex febrile seizure is focal, lasts longer than 15 minutes, or recurs within 24 hours. The child is typically neurologically normal before and after the event.
+
+DIAGNOSIS
+Lumbar puncture should be strongly considered in any child younger than 12 months presenting with a first febrile seizure, and in any child with meningeal signs. Routine electroencephalography and neuroimaging are not indicated after a simple febrile seizure in a neurologically normal child.
+
+TREATMENT
+Most febrile seizures are self-limited. For a seizure lasting longer than 5 minutes, give midazolam 0.2 mg/kg intranasally or buccally, maximum 10 mg per dose. Alternatively give rectal diazepam 0.5 mg/kg, maximum 20 mg per dose. Continuous prophylactic anticonvulsant therapy is not recommended for simple febrile seizures.
+
+PROGNOSIS
+Approximately 30% of children who have one febrile seizure will have a recurrence. The risk of subsequent epilepsy after a simple febrile seizure is approximately 1%, only marginally above the population baseline.
+
+Chapter 612
+Bacterial Meningitis Beyond the Neonatal Period
+
+ETIOLOGY
+Streptococcus pneumoniae and Neisseria meningitidis account for the majority of cases in children beyond the neonatal period in populations with routine Haemophilus influenzae type b immunization.
+
+TREATMENT
+Empiric therapy is ceftriaxone 100 mg/kg/day divided every 12 hours, maximum 4 g per day, plus vancomycin 60 mg/kg/day divided every 6 hours. Dexamethasone 0.15 mg/kg every 6 hours for 2-4 days may be considered, given before or with the first dose of antibiotic.
+
+PART XV
+Infectious Diseases
+
+Chapter 220
+Acute Otitis Media
+
+CLINICAL MANIFESTATIONS
+Acute otitis media presents with a bulging tympanic membrane, otalgia, and fever. Otorrhea of acute onset not attributable to otitis externa is also diagnostic.
+
+TREATMENT
+First-line therapy is high-dose amoxicillin 90 mg/kg/day divided every 12 hours for 10 days in children younger than 2 years. For children with recent beta-lactam exposure or concurrent purulent conjunctivitis, use amoxicillin-clavulanate. Observation without antibiotics for 48-72 hours is an option in children older than 2 years with non-severe unilateral disease and reliable follow-up.
