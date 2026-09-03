@@ -2,7 +2,7 @@
 
 **The Performance–Efficiency Trade-off in Tibetan and Sanskrit**
 
-Orr Zwebner, Guy Bilitski — accepted to [INLG 2026](https://inlg2026.github.io/), Utrecht.
+Accepted to [INLG 2026](https://inlg2026.github.io/), Utrecht.
 
 Vocabulary expansion for Tibetan and Sanskrit shows an efficiency–performance
 trade-off: small expansions yield the best generative performance, while larger
