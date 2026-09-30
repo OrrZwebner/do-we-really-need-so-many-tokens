@@ -9,6 +9,6 @@ trade-off: small expansions yield the best generative performance, while larger
 expansions shorten input and generated output but degrade it under limited
 continued pre-training.
 
-**[View the slides](https://orrzwebner.github.io/do-we-really-need-so-many-tokens/)**
+**[Website](https://orrzwebner.github.io/do-we-really-need-so-many-tokens/)** · **[Slides](https://orrzwebner.github.io/do-we-really-need-so-many-tokens/deck.html)** · **[Paper](https://drive.google.com/file/d/1xw8yNPaP4pwPZUq3eadC4mlPDbaX4fKq/view?usp=drive_link)** · **[Code](https://github.com/Intellexus-DSI/do-we-really-need-so-many-tokens)**
 
 Work done at Intellexus.
