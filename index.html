@@ -224,7 +224,8 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
   @keyframes ow-chippop{0%{opacity:0;transform:scale(.6) translateY(8px)}
                         60%{opacity:1}100%{opacity:1;transform:none}}
 
-  /* scheme: 3:1 fixed box, 6 white cover bands peeled left->right (opacity only) */
+  /* scheme: 3:1 fixed box, 6 white cover bands; all fade out TOGETHER at T_BAND = one single appearance
+     of the whole figure (author 2026-10-04; was peeled left->right). Opacity only. */
   .ow-fig{position:relative;width:936px;height:312px;margin-top:14px;flex:none}
   .ow-fig img{position:absolute;inset:0;width:100%;height:100%;display:block}
   .ow-cover{position:absolute;top:-6px;bottom:-6px;background:#fff;z-index:2;
@@ -352,7 +353,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
     <div class="ow-logos"></div>
   </div>
 
-  <aside class="notes-src">Web landing slide. Title, subtitle and authors appear word by word as chips then the methodology scheme is uncovered left to right; then Start slides, then Paper and Code.</aside>
+  <aside class="notes-src">Web landing slide. Title, subtitle and authors appear word by word as chips then the whole methodology scheme appears at once; then Start slides, then Paper and Code.</aside>
 
   <script>
   (function(){
@@ -369,10 +370,11 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
                "Nir Marciano","Erez Yousfan","Shai Fine","Kfir Bar"]
     };
     /* sequential timeline (ms): title 300/chip (0-1800) -> subtitle 80/chip (2000-2800) -> authors 150/chip
-       (3000-4050) -> 6 scheme bands one after another, 550 apart (4500-7250, done ~7800) -> Start slides +
-       hint (7900) -> Paper / Code + replay (8400) */
+       (3000-4050) -> whole scheme in ONE fade (all 6 bands together at 4500, done ~5050; author 2026-10-04,
+       was 6 bands 550 apart) -> Start slides + hint (5500) -> Paper / Code + replay (6000)
+       (buttons moved up right after the scheme, author 2026-10-04; were 7900 / 8400) */
     var T_TITLE=0, D_TITLE=300, T_SUB=2000, D_SUB=80, T_AUTH=3000, D_AUTH=150,
-        T_BAND=4500, D_BAND=550, T_START=7900, T_LINKS=8400;
+        T_BAND=4500, T_START=5500, T_LINKS=6000;
 
     var titleEl=slide.querySelector('.ow-title'), subEl=slide.querySelector('.ow-sub');
     var arows=slide.querySelectorAll('.ow-arow');
@@ -439,7 +441,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
       tChips.forEach(function(c,i){ T(on(c), T_TITLE+i*D_TITLE); });
       sChips.forEach(function(c,i){ T(on(c), T_SUB+i*D_SUB); });
       aChips.forEach(function(c,i){ T(on(c), T_AUTH+i*D_AUTH); });
-      covers.forEach(function(c,i){ T(function(){ c.classList.add('ow-off'); }, T_BAND+i*D_BAND); });
+      T(function(){ covers.forEach(function(c){ c.classList.add('ow-off'); }); }, T_BAND);   // one single appearance
       T(function(){ lates.forEach(function(c){ if(!c.classList.contains('ow-l2')) c.classList.add('ow-in'); }); }, T_START);
       T(function(){ lates.forEach(function(c){ if(c.classList.contains('ow-l2')) c.classList.add('ow-in'); }); }, T_LINKS);
     }
