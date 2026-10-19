@@ -194,7 +194,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
   /* ===== opening_web — WEB-ONLY landing slide (slide 1 of the paper website).
      Spec: docs/specs/opening_web_SPEC.md (decisions F1-F16 resolved 2026-09-30).
      Title / subtitle / authors appear as whole-word chips (revision 2026-09-30), timer-driven
-     (no .step), then the 6-band methodology-scheme reveal; then Start slides, then Paper / Code / Poster
+     (no .step), then the 6-band methodology-scheme reveal; then Start slides, then Paper / Code / Poster / LinkedIn
      fade in. Desktop = the fixed 1280x720 stage (px only). Phones in portrait
      (or width <= 700px) get a scrolling flow layout: body.ow-portrait disables the stage
      transform ONLY while this slide is active (kit untouched). All classes ow- prefixed;
@@ -233,7 +233,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
   .ow-cover.ow-off{opacity:0}
   .ow-cover:last-child{right:-4px}
 
-  /* actions below the scheme (fade in after it): Start slides + hint, then Paper / Code / Poster */
+  /* actions below the scheme (fade in after it): Start slides + hint, then Paper / Code / Poster / LinkedIn */
   .ow-links{display:flex;gap:14px;margin-top:10px;flex:none}
   .ow-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;box-sizing:border-box;
           height:42px;padding:0 18px;border-radius:9px;border:1.5px solid #1b2a4a;background:#fff;
@@ -241,6 +241,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
           cursor:pointer;transition:background .2s ease,color .2s ease}
   .ow-btn svg{width:18px;height:18px;flex:none}
   .ow-btn:hover{background:#1b2a4a;color:#fff}
+  .ow-icon{width:42px;padding:0}                        /* icon-only button (LinkedIn): square */
   .ow-start{background:#1b2a4a;color:#fff;margin-top:14px;flex:none}
   .ow-start:hover{background:#2c4170}
   .ow-hintline{margin-top:6px;height:18px;flex:none;font-family:var(--mono);font-size:13px;color:#5e6470;
@@ -280,6 +281,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
   body.ow-portrait .ow-authors .ow-chip{font-size:15px;padding:2px 5px}
   body.ow-portrait .ow-links{flex-direction:column;width:100%;gap:12px;margin-top:18px}
   body.ow-portrait .ow-btn{width:100%;min-height:48px;height:auto;font-size:17px}
+  body.ow-portrait .ow-icon{width:48px;align-self:center}
   body.ow-portrait .ow-fig{width:100%;height:auto;aspect-ratio:3/1;margin-top:22px;cursor:zoom-in}
   body.ow-portrait .ow-start{margin-top:24px}
   body.ow-portrait .ow-hintline{margin-top:10px;height:auto;font-size:14px;white-space:normal}
@@ -354,11 +356,14 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/>
           </svg>Poster</a>
+        <a class="ow-btn ow-late ow-l2 ow-icon" href="https://www.linkedin.com/in/orr-zwebner/"
+           target="_blank" rel="noopener" data-noadvance aria-label="Orr Zwebner on LinkedIn (new tab)">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
     </div>
     <div class="ow-logos"></div>
   </div>
 
-  <aside class="notes-src">Web landing slide. Title, subtitle and authors appear word by word as chips then the whole methodology scheme appears at once; then Start slides, then Paper, Code and Poster.</aside>
+  <aside class="notes-src">Web landing slide. Title, subtitle and authors appear word by word as chips then the whole methodology scheme appears at once; then Start slides, then Paper, Code, Poster and LinkedIn.</aside>
 
   <script>
   (function(){
@@ -376,7 +381,7 @@ h2{font-size:40px;line-height:1.08;font-weight:700;letter-spacing:-.01em}
     };
     /* sequential timeline (ms): title 300/chip (0-1800) -> subtitle 80/chip (2000-2800) -> authors 150/chip
        (3000-4050) -> whole scheme in ONE fade (all 6 bands together at 4500, done ~5050; author 2026-10-04,
-       was 6 bands 550 apart) -> Start slides + hint (5500) -> Paper / Code / Poster + replay (6000)
+       was 6 bands 550 apart) -> Start slides + hint (5500) -> Paper / Code / Poster / LinkedIn + replay (6000)
        (buttons moved up right after the scheme, author 2026-10-04; were 7900 / 8400) */
     var T_TITLE=0, D_TITLE=300, T_SUB=2000, D_SUB=80, T_AUTH=3000, D_AUTH=150,
         T_BAND=4500, T_START=5500, T_LINKS=6000;
